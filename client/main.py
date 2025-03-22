@@ -329,6 +329,7 @@ class Prechecks(QWidget):
         else:
             QMessageBox.warning(self, "Error", "Invalid License Key")
             self.stacked_widget.setCurrentIndex(4)
+            return
 
         self.stacked_widget.setCurrentIndex(5)
 

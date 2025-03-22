@@ -95,8 +95,9 @@ def generate_license(request: LicenseRequestGeneration):
 def verify_license(request: LicenseRequestVerification):
     """Verify license key"""
     result = get_license_by_user(request.user_id)
+    print(result)
 
-    if not result:
+    if not result or result[0] != request.license_key:
         raise HTTPException(status_code=400, detail="Invalid license key")
 
     license_key, expiry_date, last_checked = result
