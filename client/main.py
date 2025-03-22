@@ -64,7 +64,7 @@ class LoginPage(QWidget):
         login_btn = QPushButton("Login")
         login_btn.clicked.connect(self.check_login)
 
-        signup_btn = QPushButton("Sign Up")
+        signup_btn = QPushButton("Don't have an account?")
         signup_btn.clicked.connect(self.goto_signup)
 
         layout.addWidget(QLabel("Login Page"))
